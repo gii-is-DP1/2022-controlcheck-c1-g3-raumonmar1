@@ -5,14 +5,16 @@
 <%@ taglib prefix="petclinic" tagdir="/WEB-INF/tags" %>
 
 <petclinic:layout pageName="owners">
-    <jsp:attribute name="customScript">
-        <script>
-            $(function () {
-                $("#birthDate").datepicker({dateFormat: 'yy/mm/dd'});
-            });
-        </script>
-    </jsp:attribute>
     <jsp:body>
+     <c:if test="messages != null">
+            <div class="messages">
+                <c:forEach items="${messages}" var="message">
+                    <div class="message">
+                        <c:out value="${message}"/>
+                    </div>
+                </c:forEach>
+            </div>
+        </c:if>
         <h2>
             Recovery Room
         </h2>

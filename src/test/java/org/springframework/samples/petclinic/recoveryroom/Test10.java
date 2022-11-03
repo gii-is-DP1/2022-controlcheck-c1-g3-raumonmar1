@@ -42,11 +42,7 @@ public class Test10 {
         rr.setName("test");
         rr.setSecure(true);
         rr.setSize(5);
-        try {
-            rs.save(rr);
-        } catch (DuplicatedRoomNameException e) {
-            fail("The excepcion should not be thrown, the RecoveryRoom is feasible!");
-        }
+        rs.save(rr);
     }
 
     @Transactional
