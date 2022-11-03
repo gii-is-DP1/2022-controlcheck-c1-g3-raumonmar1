@@ -120,7 +120,10 @@ public class Visit extends BaseEntity {
 	}
 
 	public void setRecoveryRoom(RecoveryRoom room) {
-		// To be implemented
+//		return recoveryRoom.setId(id);
 	}
+	
+	 @ManyToOne
+	    RecoveryRoom recoveryRoom;
 
 }
